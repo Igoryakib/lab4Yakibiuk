@@ -89,3 +89,54 @@ img {
   top: calc(50% - 1.25em);
   left: 50px;
 }
+
+#box {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  top: 450px;
+  left: 0;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #87CEEB;
+}
+
+.landscape {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(to bottom, #87CEEB 60%, #3CB371 60%);
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Sun */
+.landscape::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #FFD700 60%, #FFA500 100%);
+  border-radius: 50%;
+}
+
+/* Ground */
+.landscape::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, #3CB371, #2E8B57);
+  border-radius: 0 0 15px 15px;
+}
